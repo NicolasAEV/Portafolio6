@@ -46,6 +46,6 @@ $ npm run dev : correr proyecto
 ## github
 ***
 para acceder al modulo de inventario http://localhost:port/inventario
-perfil github https://github.com/NicolasAEV/Portafolio7
+perfil github https://github.com/NicolasAEV/Portafolio6
 
 
