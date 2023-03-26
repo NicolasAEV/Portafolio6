@@ -34,11 +34,12 @@ pg-hstore
 $ git clone https://example.com
 $ cd ../path/to/the/file
 $ se dejara un archivo sql el cual contendra datos pre definidos
-$ con el presente archivo deberas añadirlo a una base de datos postgres 
+$ con el presente archivo backup-basedatos.sql deberas añadirlo a una base de datos postgres 
 $ debes agregar tu acceso a localhost (host , port , user , password, nombre de bd) ./src/db/db.js
 $ en caso de no querer agregar este archivo ir al archivo index y cambiar el siguiente codigo a true
 $ linea 23 : force:true , alter:true
 $ de manera que la base de datos al estar conectada se generara automaticamente 
+$ en este caso deberas agregar un usuario cliente y categoria manualmente en la bd
 $ npm i : inicializar proyecto
 $ npm run dev : correr proyecto
 ```
