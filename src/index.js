@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
+
 import app from "./app.js"
 import {sequelize} from "./db/db.js";
 
@@ -14,6 +17,7 @@ import './models/Cliente.model.js'
 import './models/Categoria.model.js'
 import './models/Cupon.model.js'
 import './models/relaciones.js'
+
 
 
 const main = async () =>{

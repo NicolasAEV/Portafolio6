@@ -63,6 +63,7 @@ export const createOrden = async (req, res) => {
 
         for (let index = 0; index < detalleProductos.length; index++) {
             let id_producto = detalleProductos[index].id_producto;
+            console.log('===================== id producto' ,id_producto)
             let cantidad = detalleProductos[index].cantidad;
             const producto = await Producto.findOne({
                 raw: false,
@@ -87,9 +88,10 @@ export const createOrden = async (req, res) => {
 
         await Detalle_carrito.destroy({
             where: {
-                id_carrito: idCarritoCliente
-            }
-        }, { transaction: t })
+                id_carrito: idCarritoCliente, 
+            },
+            transaction: t
+        },  )
 
         await t.commit();
 
