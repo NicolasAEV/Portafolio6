@@ -3,7 +3,7 @@
 
 // peticion fetch para recuperar los datos del carrito
 const getProducts = () => {
-    fetch('http://localhost:3000/api/carrito')
+    fetch('/api/carrito')
         .then(response => response.json())
         .then(data => {
 
@@ -141,7 +141,7 @@ const eliminarCarrito = (id) => {
         });
 }
 const sumar = (id) => {
-    let url = "http://localhost:3000/api/carrito/" + id;
+    let url = "/api/carrito/" + id;
     console.log(url)
     fetch(url, {
         method: "GET",
@@ -169,7 +169,7 @@ const comprar = () => {
     }
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    fetch("http://localhost:3000/api/ventas", {
+    fetch("/api/ventas", {
         method: "POST",
         headers: myHeaders,
         body: JSON.stringify(client),

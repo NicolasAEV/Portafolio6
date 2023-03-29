@@ -22,7 +22,7 @@ formulario.addEventListener('submit',(e)=>{
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    fetch("http://localhost:3000/api/inventario", {
+    fetch("/api/inventario", {
         method: "PUT",
         headers: myHeaders,
         body: JSON.stringify(productoActualizado)
@@ -33,7 +33,7 @@ formulario.addEventListener('submit',(e)=>{
             console.log(data.message)
         }else{
             console.log('aca')
-            location.href = "http://localhost:3000/inventario";
+            location.href = "/inventario";
         }
     })
     .catch(error => {

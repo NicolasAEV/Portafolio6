@@ -20,7 +20,7 @@ formulario.addEventListener('submit',(e)=>{
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
    
-      fetch("http://localhost:3000/api/inventario", {
+      fetch("/api/inventario", {
             method: "POST",
             headers: myHeaders,
             body: JSON.stringify(productoActualizado)
@@ -42,7 +42,7 @@ formulario.addEventListener('submit',(e)=>{
 
 
 const eliminarProducto = (id) => {
-    fetch("http://localhost:3000/api/inventario/"+id, {
+    fetch("/api/inventario/"+id, {
         method: "DELETE",
     })
      .then(response => response.json())

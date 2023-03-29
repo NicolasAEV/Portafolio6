@@ -3,7 +3,7 @@
 
 const addProduct = (id) => {
     console.log(id)
-    let url = "http://localhost:3000/api/carrito/" + id ; 
+    let url = "/api/carrito/" + id ; 
     console.log(url)
     fetch(url,{
         method: "GET"
