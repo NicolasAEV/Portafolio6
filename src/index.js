@@ -29,7 +29,7 @@ const main = async () =>{
         let PORT =process.env.PORT || 3000;
         app.listen(PORT , ()=>console.log('servidor en el puerto' + PORT))
     } catch (error) {
-        console.log(error)
+        console.log(error.stack)
         console.log('a ocurrido un error')
     }
 }
